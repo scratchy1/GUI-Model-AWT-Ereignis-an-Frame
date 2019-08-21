@@ -1,0 +1,41 @@
+import java.awt.*;
+
+//Klasse fuer Beobachter der Ereignissorte WindowEvent
+public class FensterBeobachter implements WindowListener {
+ // Das einzige Ereignis der Sorte, welches uns interessiert,
+ // ist windowClosing. Wir implementieren die fuer dieses
+ // Ereignis vorgesehene Rueckrufmethode so, dass sie das tut,
+ // was wir als Reaktion auf das Ereignis haben moechten.
+    @Override
+    public void windowClosing(WindowEvent e) {
+        System.exit(0);
+    }
+ // Die anderen vom Interface WindowListener vereinbarten
+ // Methoden muessen wir ebenfalls implementieren. Da wir
+ // auf die entsprechenden Ereignisse nicht reagieren wollen
+ // werden die Methoden mit leerem Rumpf implementiert.
+
+    @Override
+    public void windowOpened(WindowEvent e) {
+    }
+
+    @Override
+    public void windowClosed(WindowEvent e) {
+    }
+
+    @Override
+    public void windowIconified(WindowEvent e) {
+    }
+
+    @Override
+    public void windowDeiconified(WindowEvent e) {
+    }
+
+    @Override
+    public void windowActivated(WindowEvent e) {
+    }
+
+    @Override
+    public void windowDeactivated(WindowEvent e) {
+    }
+}
