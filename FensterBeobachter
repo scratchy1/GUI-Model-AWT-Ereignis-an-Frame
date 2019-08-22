@@ -8,34 +8,43 @@ public class FensterBeobachter implements WindowListener {
  // was wir als Reaktion auf das Ereignis haben moechten.
     @Override
     public void windowClosing(WindowEvent e) {
-        System.exit(0);
+        System.out.println("Schliessen angefordert.");
+     // Anmerkung: Der Cast auf Window ist noetig, weil der
+     // Ergebnistyp der Methode getSource der Typ Object ist.
+     Window window = (Window) e.getSource();
+     window.dispose();
     }
  // Die anderen vom Interface WindowListener vereinbarten
- // Methoden muessen wir ebenfalls implementieren. Da wir
- // auf die entsprechenden Ereignisse nicht reagieren wollen
- // werden die Methoden mit leerem Rumpf implementiert.
+ // Methoden muessen wir ebenfalls implementieren. 
 
     @Override
     public void windowOpened(WindowEvent e) {
+     System.out.println("Fenster geoeffnet.");
     }
 
     @Override
     public void windowClosed(WindowEvent e) {
+     System.out.println("Fenster geschlossen.");
+        System.exit(0);
     }
 
     @Override
     public void windowIconified(WindowEvent e) {
+    System.out.println("Fenster ikonifiziert.");
     }
 
     @Override
     public void windowDeiconified(WindowEvent e) {
+    System.out.println("Fenster deikonifiziert.");
     }
 
     @Override
     public void windowActivated(WindowEvent e) {
+     System.out.println("Fenster aktiviert.");
     }
 
     @Override
     public void windowDeactivated(WindowEvent e) {
+    System.out.println("Fenster deaktiviert.");
     }
 }
