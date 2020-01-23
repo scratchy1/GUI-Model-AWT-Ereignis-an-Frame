@@ -1,9 +1,0 @@
-import java.awt.*;
-public class BaseFrameTest {
-
-    public static void main(String[] args) {
-        Frame f=new BaseFrame();
-        f.setVisible(true);
-    }
-
-}
